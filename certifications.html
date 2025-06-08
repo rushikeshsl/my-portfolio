@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>S-Curve with White Circles and Labels</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Antic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      background: #fffde7;
+      margin: 0;
+      padding: 0px 50px;
+      font-family: 'Antic', serif;
+      text-align: center;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-image:
+        linear-gradient(to right, #fdd835 0.5px, transparent 1px),
+        linear-gradient(to bottom, #fdd835 0.5px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: -1;
+    }
+
+    /* === header block from treemap example === */
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0 10px;
+      position: relative;
+      height: auto;
+    }
+    .header h1 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+      background-color: #d62828;
+      padding: 8px 30px;
+      border: 1px solid black;
+      box-shadow: 5px 5px 0px black;
+      margin: 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .header h1:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 0px #000000, 5px 5px 0px black;
+    }
+    /* ========================================= */
+
+    svg {
+      display: block;
+      margin: auto;
+      max-height: 80vh;
+    }
+    path {
+      stroke: #CBC3E3;
+      stroke-width: 3;
+      stroke-dasharray: 0, 4;
+      stroke-linecap: round;
+      fill: none;
+    }
+    .dot {
+      fill: white;
+      stroke: black;
+      stroke-width: 1px
+    }
+    .circle-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      font-weight: 600;
+      fill: #9e2e62;
+      text-anchor: middle;
+      user-select: none;
+    }
+    .hover-group {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      transform-box: fill-box;
+      transform-origin: center;
+      will-change: transform;
+    }
+    .hover-group:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Certifications</h1>
+  </div>
+
+  <svg 
+    width="1200" height="500" 
+    xmlns="http://www.w3.org/2000/svg" 
+    role="img" aria-label="Roadmap Timeline"
+  >
+    <!-- Inverted S-Curve -->
+    <path d="
+      M150,50 
+      H1050 
+      C1100,50 1100,200 1050,200 
+      H150 
+      C100,200 100,375 150,375 
+      H1050
+    " />
+
+    <!-- Top line (5 circles and logos wrapped in groups) -->
+    <a href='https://www.credly.com/badges/2304765d-92db-455a-93bb-0b4bad76867a/linked_in_profile' target="_blank">
+      <g class="hover-group">
+        <circle class="dot" cx="200" cy="50" r="24" />
+        <image href="C:\Users\Rushikesh\Desktop\Portfolio\LOGOS\7123025_logo_google_g_icon.png" x="178" y="26" width="44" height="44" />
+      </g>
+    </a>
+    <text class="circle-label" x="200" y="95">
+      <tspan x="200" dy="0">Google Advanced</tspan>
+      <tspan x="198" dy="20">Data Analytics</tspan>
+    </text>
+
+    <a href='https://www.credly.com/badges/38c50ce8-135c-4a4c-ab22-4f855b4f2a48/linked_in_profile' target="_blank">
+      <g class="hover-group">
+        <circle class="dot" cx="390" cy="50" r="24" />
+        <image href="C:\Users\Rushikesh\Desktop\Portfolio\LOGOS\7123025_logo_google_g_icon.png" x="368" y="26" width="44" height="44" />
+      </g>
+    </a>
+    <text class="circle-label" x="390" y="95">
+      <tspan x="392" dy="0">Google Business</tspan>
+      <tspan x="390" dy="20">Intelligence</tspan>
+    </text>
+
+    <a href='https://www.udemy.com/certificate/UC-1f350eaf-e2e8-45d4-b44d-d535b509566b/' target="_blank">
+      <g class="hover-group">
+        <circle class="dot" cx="580" cy="50" r="24" />
+        <image href="C:\Users\Rushikesh\Desktop\Portfolio\LOGOS\udemy.png" x="558" y="26" width="44" height="44" />
+      </g>
+    </a>
+    <text class="circle-label" x="580" y="95">
+      <tspan x="582" dy="0">Power BI Desktop</tspan>
+      <tspan x="582" dy="20">for Business</tspan>
+      <tspan x="578" dy="20">Intelligence</tspan>
+    </text>
+
+    <a href='https://www.hackerrank.com/certificates/1f8e8a95c4a0' target="_blank">
+      <g class="hover-group">
+        <circle class="dot" cx="750" cy="50" r="24" />
+        <image href="C:\Users\Rushikesh\Desktop\Portfolio\LOGOS\sql.png" x="655" y="-42" width="200" height="200" />
+      </g>
+    </a>
+    <text class="circle-label" x="750" y="95">
+      <tspan x="752" dy="0">SQL</tspan>
+      <tspan x="752" dy="20">(Intermediate)</tspan>
+    </text>
+
+    <g class="hover-group">
+      <circle class="dot" cx="920" cy="50" r="24" />
+    </g>
+    <text class="circle-label" x="920" y="95">Review</text>
+
+    <!-- Middle curve (5 circles) -->
+    <g class="hover-group">
+      <circle class="dot" cx="920" cy="200" r="24" />
+    </g>
+    <text class="circle-label" x="920" y="245">Test</text>
+
+    <g class="hover-group">
+      <circle class="dot" cx="730" cy="200" r="24" />
+    </g>
+    <text class="circle-label" x="730" y="245">Fixes</text>
+
+    <g class="hover-group">
+      <circle class="dot" cx="580" cy="200" r="24" />
+    </g>
+    <text class="circle-label" x="580" y="245">Build</text>
+
+    <g class="hover-group">
+      <circle class="dot" cx="390" cy="200" r="24" />
+    </g>
+    <text class="circle-label" x="390" y="245">Deploy</text>
+
+    <g class="hover-group">
+      <circle class="dot" cx="200" cy="200" r="24" />
+    </g>
+    <text class="circle-label" x="200" y="245">Feedback</text>
+
+    <!-- Bottom line (5 circles) -->
+    <g class="hover-group">
+      <circle class="dot" cx="200" cy="375" r="24" />
+    </g>
+    <text class="circle-label" x="200" y="420">Launch</text>
+
+    <g class="hover-group">
+      <circle class="dot" cx="390" cy="375" r="24" />
+    </g>
+    <text class="circle-label" x="390" y="420">Scale</text>
+
+    <g class="hover-group">
+      <circle class="dot" cx="580" cy="375" r="24" />
+    </g>
+    <text class="circle-label" x="580" y="420">Support</text>
+
+    <g class="hover-group">
+      <circle class="dot" cx="730" cy="375" r="24" />
+    </g>
+    <text class="circle-label" x="730" y="420">Update</text>
+
+    <g class="hover-group">
+      <circle class="dot" cx="920" cy="375" r="24" />
+    </g>
+    <text class="circle-label" x="920" y="420">Complete</text>
+  </svg>
+
+</body>
+</html>

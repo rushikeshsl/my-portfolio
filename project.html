@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: #fffde7;
+      margin: 0;
+      padding: 0px 50px;
+      font-family: 'Antic', serif;
+      text-align: center;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image:
+        linear-gradient(to right, #fdd835 0.5px, transparent 1px),
+        linear-gradient(to bottom, #fdd835 0.5px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: -1;
+    }
+
+    /* Updated Header Styles */
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0 50px;
+      position: relative;
+      height: auto;
+    }
+    .header h1 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+      background-color: #d62828;
+      padding: 8px 30px;
+      border: 1px solid black;
+      box-shadow: 5px 5px 0px black;
+      margin: 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .header h1:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 0px #000000, 5px 5px 0px black;
+    }
+
+    .projects {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 0 2rem;
+      flex-wrap: wrap;
+    }
+
+    .project-card {
+      border: 2px solid black;
+      background-color: #ffffff;
+      border-radius: 0rem;
+      padding: 1.5rem 1rem;
+      width: 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 6px 6px 0px black;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.025);
+    }
+
+    .project-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin: 1rem 0 1rem;
+      line-height: 1.4;
+      padding: 0 5px;
+      word-break: break-word;
+      white-space: normal;
+      text-align: center;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 999px;
+      font-size: 0.8rem;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: auto;
+    }
+
+    .show-button, .source-button {
+      border: none;
+      color: white;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: background 0.4s, transform 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    /* Bloody Mary gradient for SHOW */
+    .show-button {
+      background: linear-gradient(to right, #ff512f, #dd2476);
+    }
+    .show-button:hover {
+      background: linear-gradient(to right, #dd2476, #ff512f);
+    }
+
+    /* Green Beach gradient for SOURCE */
+    .source-button {
+      background: linear-gradient(to right, #02aab0, #00cdac);
+    }
+    .source-button:hover {
+      background: linear-gradient(to right, #00cdac, #02aab0);
+    }
+
+    .show-button:active,
+    .source-button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Projects</h1>
+  </div>
+
+  <div class="projects">
+    <div class="project-card">
+      <div class="project-title">Annual Survey<br>of Industries Dashboard</div>
+      <div class="tags">
+        <div class="tag">Pandas</div>
+        <div class="tag">Power Query</div>
+        <div class="tag">DAX</div>
+        <div class="tag">Power BI</div>
+      </div>
+      <div class="button-group">
+        <a href="https://asi-app-rushikeshlahane.streamlit.app/" target="_blank" rel="noopener noreferrer" class="show-button">SHOW</a>
+        <a href="https://github.com/thersl001/annual-survey-of-industries-dashboard" target="_blank" rel="noopener noreferrer" class="source-button">SOURCE</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Labour Force<br>Participation Predictor</div>
+      <div class="tags">
+        <div class="tag">Logistic Regression</div>
+        <div class="tag">Pandas</div>
+        <div class="tag">Statsmodels</div>
+        <div class="tag">Scikit-learn</div>
+      </div>
+      <div class="button-group">
+        <a href="#" class="show-button">SHOW</a>
+        <a href="#" class="source-button">SOURCE</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Medallion Architecture<br>Data Warehouse</div>
+      <div class="tags">
+        <div class="tag">Delta Lake</div>
+        <div class="tag">Power BI</div>
+        <div class="tag">Lakehouse</div>
+        <div class="tag">ETL</div>
+      </div>
+      <div class="button-group">
+        <a href="#" class="show-button">SHOW</a>
+        <a href="https://github.com/thersl001/sql_data_warehouse_project" target="_blank" rel="noopener noreferrer" class="source-button">SOURCE</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

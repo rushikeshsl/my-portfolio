@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+  background: #fffde7;
+  margin: 0;
+  padding: 0;
+  font-family: 'JetBrains Mono', monospace;
+  color: #333;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-image:
+    linear-gradient(to right, #fdd835 0.5px, transparent 1px),
+    linear-gradient(to bottom, #fdd835 0.5px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: -1;
+}
+
+
+    .contact-section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 4rem;
+      height: 100vh;
+      padding: 2rem;
+      box-sizing: border-box;
+      margin-top: 40px;
+    }
+
+    .contact-info,
+    .contact-form {
+      background-color: #ffffff;
+      border: 2px solid black;
+      box-shadow: 6px 6px 0px black;
+      padding: 1.5rem;
+      box-sizing: border-box;
+      flex: 1 1 0;
+      max-width: 450px;
+      overflow: auto;
+    }
+
+    .contact-info h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info a {
+      color: #ff4e50;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .social-links {
+      margin-top: 1rem;
+    }
+
+    .social-links p {
+      margin: 1rem 0;
+    }
+
+    .contact-form h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 0.9rem;
+      padding: 0.7rem;
+      font-size: 0.95rem;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      background: linear-gradient(to right, #ff4e50, #f9d423);
+      border: none;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: white;
+      border-radius: 2rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #f9d423, #ff4e50);
+    }
+
+    @media (max-width: 768px) {
+      html, body {
+        overflow: auto;
+        height: auto;
+      }
+
+      .contact-section {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .contact-info,
+      .contact-form {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-info">
+      <h2>Let's Connect</h2>
+      <p><strong>Email:</strong> <a href="mailto:your@email.com">rushikeshlahane13@gmail.com</a></p>
+      <div class="social-links">
+        <p><a href="https://www.linkedin.com/in/rushikesh-maha/" target="_blank">LinkedIn</a></p>
+        <p><a href="https://github.com/rushikeshsl" target="_blank">GitHub</a></p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education</title>
+  <link href="https://fonts.googleapis.com/css2?family=Antic&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fffde7;
+      font-family: 'JetBrains Mono', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image:
+        linear-gradient(to right, #fdd835 0.5px, transparent 1px),
+        linear-gradient(to bottom, #fdd835 0.5px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: -1;
+    }
+
+    .timeline {
+      position: relative;
+      width: 90%;
+      max-width: 1100px;
+      height: 600px;
+    }
+
+    .line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      border-left: 2px dotted black;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .education-box {
+      position: absolute;
+      width: 300px;
+      z-index: 2;
+    }
+
+    .education-box .content {
+      background: #fffaf0;
+      border: 2px solid black;
+      box-shadow: 5px 5px 0 black;
+      padding: 10px 14px;
+      font-size: 15px;
+      line-height: 1.3;
+      font-family: 'JetBrains Mono', monospace;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .education-box .content h2 {
+      font-family: 'Antic', sans-serif;
+      font-size: 25px;
+      margin: 0 0 6px 0;
+    }
+
+    .education-box:hover .content {
+      transform: scale(1.05);
+      z-index: 10;
+      position: relative;
+    }
+
+    .left-box {
+      top: 80px;
+      left: calc(50% - 380px);
+    }
+
+    .right-box {
+      bottom: 80px;
+      left: calc(50% + 80px);
+    }
+
+    /* Detached connectors - position relative to .timeline */
+    .connector {
+      position: absolute;
+      top: 104px; /* Adjust as needed */
+      width: 80px;
+      height: 2px;
+      background-color: black;
+      z-index: 1;
+    }
+
+    .left-connector {
+      top: 150px;
+      left: calc(50% - 380px + 300px); /* box left + box width */
+    }
+
+    .right-connector {
+      left: calc(50% + 80px - 80px); /* box left - connector width */
+      bottom: 200px;
+      top: auto; /* override top */
+    }
+
+    .image-sample {
+      position: absolute;
+      width: 500px;
+      height: auto;
+      z-index: 0;
+    }
+
+    .image-left {
+      bottom: 60px;
+      left: 80px;
+    }
+
+    .image-right {
+      top: 120px;
+      right: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="timeline">
+    <div class="line"></div>
+
+    <div class="education-box left-box">
+      <div class="content">
+        <h2>Higher Secondary School</h2>
+        <p>New Arts, Commerce and Science College, Ahmednagar</p>
+        <p>2022 – 2023</p>
+        <p>85.67%</p>
+      </div>
+    </div>
+    <div class="connector left-connector"></div>
+
+    <div class="education-box right-box">
+      <div class="content">
+        <h2>Bachelor of Science in Economics</h2>
+        <p>Lovely Professional University, Jalandhar</p>
+        <p>2023 – 2026</p>
+        <p>8.01 CGPA</p>
+      </div>
+    </div>
+    <div class="connector right-connector"></div>
+
+    <img src="C:\Users\Rushikesh\Desktop\Portfolio\LOGOS\book-removebg-preview.png" class="image-sample image-left" alt="Books" />
+    <img src="C:\Users\Rushikesh\Desktop\Portfolio\LOGOS\pencil-removebg-preview.png" class="image-sample image-right" alt="Notebook" />
+  </div>
+</body>
+</html>

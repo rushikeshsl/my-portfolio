@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'JetBrains Mono', monospace;
+      background-color: #fffde7;
+      background-size: 40px 40px;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image:
+        linear-gradient(to right, #fdd835 0.5px, transparent 1px),
+        linear-gradient(to bottom, #fdd835 0.5px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: -1;
+    }
+    .container {
+      width: 1100px;
+      height: 500px;
+      margin: 20px auto;
+      padding: 40px;
+      background-color: #fefdeb;
+      border: 5px solid black;
+      box-shadow: 5px 5px 0px 0px black;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .cloud {
+      position: absolute;
+      top: -60px;
+      right: -30px;
+      width: 400px;
+      height: auto;
+      z-index: 0;
+    }
+
+    .eye-img {
+      position: absolute;
+      top: -45px; /* adjust based on h1 */
+      left: 200px; /* position to the right of h1 text */
+      width: 400px;
+      height: 200px;
+      z-index: 1;
+    }
+
+    .text-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      box-sizing: border-box;
+      padding-right: 40px; /* adjust as needed to match the left padding */
+    }
+
+    .text-section h1 {
+      font-weight: 700;
+      font-size: 28px;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    .text-section p {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 15px;
+      text-align: left;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Cloud image -->
+    <img src="C:\Users\Rushikesh\Desktop\Portfolio\LOGOS\clouds-removebg-preview.png" alt="cloud" class="cloud" />
+
+    <!-- Eye image (now fully separated) -->
+    <img src="C:\Users\Rushikesh\Desktop\Portfolio\LOGOS\eyes-removebg-preview.png" alt="eye" class="eye-img">
+
+    <!-- Text content -->
+    <div class="text-section">
+      <h1>Hi, I’m Rushikesh</h1>
+
+      <p>
+        I am a final year undergrad student from Ahmednagar, Maharashtra pursuing B.Sc. Economics in Lovely Professional University in Jalandhar, Punjab.
+      </p>
+      <p>
+        I am aspiring to be a Data Analyst, I really want to explore this intersection of technology and data. Currently I have a strong foundation in SQL, Power BI, Python but it is not the all, I am continuously expanding my knowledge in this domain, learning new tools, technologies. I always trying to explore new domains that complement my current academic background.
+      </p>
+      <p>
+        I have always tried to work with real world data rather than dummy datasets. Talking about my recent projects, I designed a BI dashboard using ASI dataset from 2008–2023 to understand the industrial landscape of India. I also built a logistic regression model to predict the labour force participation rate in India using the unit level data of MoSPI.
+      </p>
+      <p>
+        I have so many things to share, but then let’s save it for another day.
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-note">This portfolio is built by Rushi, GPT and Grok together...❤️</div>
+  </div>
+
+</body>
+</html>
